@@ -22,7 +22,7 @@ function tebakAngka(){
       </header>
        <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 max-w-7xl mx-auto items-center ">
         <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 lg:col-span-1">
-          <h3 className="text-xl font-bold mb-3 text-indigo-700 border-b pb-2">1. Paragraf Default (Kurang Rapi)</h3>
+          <h3 className="text-xl font-bold mb-3 text-indigo-700 border-b pb-2">Informasi Mekanisme</h3>
           <p className="text-base text-gray-700">
 ⚙️ Mekanisme Permainan Utama
 Permainan Tebak Angka memiliki alur yang sangat mudah dipahami, menjadikannya ideal untuk segala usia dan platform : <br />
