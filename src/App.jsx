@@ -16,26 +16,26 @@ function tebakAngka(){
   }
 } 
   return (
-    <main className='flex flex-col items-center mt-20'>
-      <header className=''>
+    <main className='flex flex-col items-center min-h-screen bg-black text-white gap-8 pt-8'>
+      <header className='text-2xl font-bold'>
         Guessing the Number
       </header>
-      <section className=''>
+      <section className='flex flex-col items-center'>
         <input type="number" 
                 placeholder='Masukan Angka'
                 value={guess}
                 onChange={(e) => setGuess(e.target.value)}
-                className=''
+                className='mb-3 p-2 rounded-2xl bg-cyan-50 text-black hover:bg-gray-300 font-semibold'
         />
         <button 
         onClick={tebakAngka}
-        className='bg-purple-800'>
+        className='bg-purple-500 px-4 py-2 rounded-2xl hover:bg-purple-400'>
           submit
         </button>
+      </section>
       <article>
         <p>{result}</p>
       </article>
-      </section>
     </main>
   )
 }
