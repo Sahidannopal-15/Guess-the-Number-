@@ -2,7 +2,7 @@ import React, { use } from 'react'
 import { useState } from "react";
 
 function App(){
-  const [randomNumber, setRandomNumber] = useState(Math.floor(Math.random() *100) + 1) ;
+  const [randomNumber, setRandomNumber] = useState(Math.floor(Math.random() *100) + 1);
   const [guess, setGuess] = useState('');
   const [result, setResult] = useState('');
   const [hint, setHint] = useState('');
@@ -36,23 +36,10 @@ function reset(){
   setHistory([]);
 }
   return (
-    <main className='flex flex-col items-center min-h-screen bg-black text-white gap-8 pt-8'>
-      <header className='text-2xl font-bold'>
-        Guessing the Number
-      </header>
-       <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 max-w-md mx-auto items-center ">
-        <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200 lg:col-span-1">
-          <h3 className="text-xl font-bold mb-3 text-indigo-700 border-b pb-2">Informasi Mekanisme</h3>
-          <p className="text-base text-gray-700">
-⚙️ Mekanisme Permainan Utama
-Permainan Tebak Angka : <br />
-Penentuan Angka Rahasia: Komputer secara acak memilih satu angka bulat dalam rentang yang telah ditentukan antara 1 dan 100. Angka ini disembunyikan dari pemain. <br />
-Input Pemain: Pemain memasukkan tebakan mereka. <br />
-Umpan Balik : Setelah pemain memasukkan angka, sistem akan memberikan petunjuk apakah angka tebakan mereka terlalu Tinggi atau terlalu Rendah dari angka rahasia.
-    </p>
-      </div>
-        </div>
-      <section className='flex flex-col items-center'>
+    <main className='flex h-screen bg-black text-white '>
+    <div className='flex-1 flex flex-col items-center justify-center mt-8 '>
+      <section className='flex-1 flex flex-col items-center justify-center gap-4'>
+        <p className='text-2xl font-bold'>🎯 Tebak Angka 1-100</p>
         <input type="number" 
                 placeholder='Masukan Angka'
                 value={guess}
@@ -62,28 +49,28 @@ Umpan Balik : Setelah pemain memasukkan angka, sistem akan memberikan petunjuk a
         <button 
         onClick={tebakAngka}
         className='bg-purple-500 px-4 py-2 rounded-2xl hover:bg-purple-400'>
-          submit
+          Tebak
         </button>
         <button 
         onClick={reset}
-        className='mt-3 bg-purple-500 px-4 py-2 rounded-2xl hover:bg-purple-400'
+        className=' bg-purple-500 px-4 py-2 rounded-2xl hover:bg-purple-400'
         >
           Reset
         </button>
+          <p>{result}</p>
       </section>
-      <article>
-        <p>{result}</p>
-        <p>{hint}</p>
+      </div>
+      <div className='flex flex-col bg-green-900 w-[30%] p-8 h-full overflow-y-auto'>
+          <p className='font-xl font-semibold mt-8 text-center'>Petunjuk: {hint}</p>
         <ul>
           {history.map((item, index) => (
-          <li key={index}>
+          <li className='pt-8 flex justify-center items-center' key={index}>
             tebakan ke {index + 1} : {item};
           </li>
           ))}
         </ul>
-      </article>
+      </div>
       <footer>
-        
       </footer>
     </main>
   )
