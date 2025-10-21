@@ -36,9 +36,8 @@ function reset(){
   setHistory([]);
 }
   return (
-    <main className='flex h-screen bg-black text-white '>
-    <div className='flex-1 flex flex-col items-center justify-center mt-8 '>
-      <section className='flex-1 flex flex-col items-center justify-center gap-4'>
+    <main className='flex h-screen bg-black text-white'>
+      <section className='flex-1 flex flex-col items-center mt-8 gap-4'>
         <p className='text-2xl font-bold'>🎯 Tebak Angka 1-100</p>
         <input type="number" 
                 placeholder='Masukan Angka'
@@ -58,20 +57,20 @@ function reset(){
           Reset
         </button>
           <p>{result}</p>
-      </section>
-      </div>
-      <div className='flex flex-col bg-green-900 w-[30%] p-8 h-full overflow-y-auto'>
+          <footer className='mt-28'>
+            Contributor
+          </footer>
+      </section>  
+      <div className='flex flex-col bg-green-900 w-[43%] h-full overflow-y-auto'>
           <p className='font-xl font-semibold mt-8 text-center'>Petunjuk: {hint}</p>
         <ul>
           {history.map((item, index) => (
           <li className='pt-8 flex justify-center items-center' key={index}>
-            tebakan ke {index + 1} : {item};
+            tebakan ke {index + 1} : {item}
           </li>
           ))}
         </ul>
       </div>
-      <footer>
-      </footer>
     </main>
   )
 }
