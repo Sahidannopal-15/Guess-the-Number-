@@ -37,7 +37,7 @@ function reset(){
   setHistory([]);
 }
   return (
-    <main className='flex flex-col md:flex-row h-screen md:bg-gradient-to-r from-black via-gray-900 to-black text-white'>
+    <main className='flex flex-col md:flex-row h-screen bg-gradient-to-r from-black via-gray-900 to-black text-white'>
       <section className='flex-1 flex flex-col items-center mt-8 gap-4'>
         <p className='text-xl md:text-2xl font-extrabold tracking-wide'>🎯 Tebak Angka 1-100</p>
         <input type="number" 
